@@ -3,6 +3,7 @@ import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TechMarquee from './components/TechMarquee';
+import HorizontalShowcase from './components/HorizontalShowcase';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import TechStack from './components/TechStack';
@@ -20,6 +21,7 @@ export default function App() {
       <main>
         <Hero />
         <TechMarquee />
+        <HorizontalShowcase />
         <Projects />
         <Experience />
         <Stats />

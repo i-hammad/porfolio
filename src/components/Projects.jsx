@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import { projects } from '../data/projects';
+import { useSplitReveal } from '../hooks/useSplitReveal';
 
 function ProjectRow({ project, index }) {
   const ref = useRef(null);
@@ -108,6 +109,8 @@ function ProjectRow({ project, index }) {
 }
 
 export default function Projects() {
+  const headlineRef = useSplitReveal();
+
   return (
     <section id="work" className="relative py-28 lg:py-36">
       <div className="container-edit">
@@ -119,7 +122,7 @@ export default function Projects() {
           className="max-w-[640px] mb-6"
         >
           <p className="eyebrow mb-4">Selected Work</p>
-          <h2 className="font-display text-[38px] sm:text-[48px] font-semibold leading-[1.05] text-balance">
+          <h2 ref={headlineRef} className="font-display text-[38px] sm:text-[48px] font-semibold leading-[1.05] text-balance">
             Three products, three very different constraints.
           </h2>
         </motion.div>
